@@ -184,9 +184,32 @@
             </div>
           </div>
 
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h3 class="title is-3">Method</h3>
+              <!-- 插入PDF图片，宽度100% -->
+              <div style="width:100%;margin-bottom:24px;">
+                <!-- 将 PDF embed 替换为图片展示 -->
+                <img src="static/images/overview_00.png" alt="Visualization Figure" style="width:100%;display:block;margin-bottom:24px;"/>
+              </div>
+              <div class="content has-text-justified">
+                <p>
+                  Overview of our Endo-TTAP framework for endoscopic tissue tracking.
+                  (a) Two-stage Hybrid Dataset: Stage I employs synthetic data with optical flow ground truth for supervised initialization; Stage II transitions to real surgical videos with sparse annotations enhanced by PLG-generated pseudo-labels to enable semi-supervised learning.
+                  (b) Main Framework: Built on frozen SEA-RAFT backbone with Auxiliary Curriculum Adapter (ACA) for progressive domain adaptation and Multi-Facet Guided Attention (MFGA) for heterogeneous feature fusion. DINOv2 provides semantic embeddings complementing motion information. Training uses stage-specific losses (L1, L2) with Point Head active only in Stage II.
+                  (c) Multi-Facet Guided Attention (MFGA): Fusing multi-scale flow features and semantic embeddings via guided attention, where hybrid features serve as queries to aggregate intermediate representations for uncertainty and occlusion prediction.
+                  (d) Pseudo Label Generator (PLG): Four-step process for creating dense annotations from sparse surgical data:                  
+                  1.SAM2 tissue segmentation with sparse point prompts; 2.XFeat anchor point matching with confidence filtering; 3. Dual-tracker (MFT + CoTracker3) trajectory propagation; 4. Distance-based Trajectory Filtering (DTF) removes unreliable trajectories by comparing endpoints, ensuring high-quality pseudo-supervision.
+              </div>
+            </div>
+          </div>
+
           <div class="columns is-centered has-text-centered" style="margin-top: 3rem; margin-bottom: 2rem;">
             <div class="column is-full">
               <h2 class="title is-3">Robustness in Challenging Scenarios</h2>
+              <p class="subtitle is-5" style="margin-top: 1rem;">
+                The left side shows predictions from MFT, and the right side shows predictions from Endo-TTAP. And we conducted evaluations across five challenging scenarios.
+              </p>
             </div>
           </div>
                     <!-- 第一组 -->
@@ -223,12 +246,12 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-half">
               <video width="512" height="384" controls autoplay muted loop>
-                <source src="static/video/mft_1_h264.mp4" type="video/mp4">
+                <source src="static/video/mft_1_new.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column is-half">
               <video width="512" height="384" controls autoplay muted loop>
-                <source src="static/video/ttap_1_h264.mp4" type="video/mp4">
+                <source src="static/video/ttap_1_new.mp4" type="video/mp4">
               </video>
             </div>
           </div>
