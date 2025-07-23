@@ -184,11 +184,15 @@
             </div>
           </div>
 
-
+          <div class="columns is-centered has-text-centered" style="margin-top: 3rem; margin-bottom: 2rem;">
+            <div class="column is-full">
+              <h2 class="title is-3">Robustness in Challenging Scenarios</h2>
+            </div>
+          </div>
                     <!-- 第一组 -->
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
-              <h4 class="title is-3">Tissue Deformation</h4>
+              <h4 class="title is-4">Tissue Deformation</h4>
             </div>
           </div>
           <div class="columns is-centered has-text-centered">
@@ -206,15 +210,14 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
               <p class="content has-text-justified">
-                Demonstration of tracking robustness under tissue deformation and instrument occlusion scenarios.
-              </p>
+                Endo-TTAP substantially improves tracking accuracy, maintaining consistent performance despite frequent occlusions. This robustness is mainly due to uncertainty-aware prediction and semantic guidance, which help preserve point identities during temporary obstructions.              </p>
             </div>
           </div>
 
           <!-- 第二组 -->
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
-              <h4 class="title is-3">Instrument Occlusion</h4>
+              <h4 class="title is-4">Instrument Occlusion</h4>
             </div>
           </div>
           <div class="columns is-centered has-text-centered">
@@ -232,7 +235,7 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
               <p class="content has-text-justified">
-                Tracking results under camera instability and reflective surfaces in surgical scenes.
+                Endo-TTAP demonstrates improved stability and robustness in tracking tissue boundary points over extended sequences, especially under non-rigid motion. Even when partially occluded by surgical instruments, Endo-TTAP significantly enhances tracking accuracy and consistency. This improvement is primarily attributed to uncertainty-aware prediction and semantic guidance, which help maintain point identities during temporary occlusions.
               </p>
             </div>
           </div>
@@ -240,7 +243,7 @@
           <!-- 第三组 -->
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
-              <h4 class="title is-3">Camera Jitter</h4>
+              <h4 class="title is-4">Camera Jitter</h4>
             </div>
           </div>
           <div class="columns is-centered has-text-centered">
@@ -258,7 +261,7 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
               <p class="content has-text-justified">
-                Performance under domain shift from synthetic to real scenes.
+                Endo-TTAP demonstrates a clear improvement over MFT, despite the overall error remaining elevated due to sudden endoscope movements. These abrupt shifts introduce jitter that leads to temporary misalignments, making long-term tracking more challenging.
               </p>
             </div>
           </div>
@@ -266,7 +269,7 @@
           <!-- 第四组 -->
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
-              <h4 class="title is-3">Surface Reflection</h4>
+              <h4 class="title is-4">Surface Reflection</h4>
             </div>
           </div>
           <div class="columns is-centered has-text-centered">
@@ -284,7 +287,7 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
               <p class="content has-text-justified">
-                Evaluation under extended surface challenges and synthetic-to-real transfer.
+                Endo-TTAP performs robustly under reflection conditions, showing improved tracking accuracy and demonstrating resilience to illumination artifacts. This robustness is largely attributed to the semantic embeddings from DINOv2, which provide texture-independent visual representations that help maintain tracking performance.
               </p>
             </div>
           </div>
@@ -292,7 +295,7 @@
           <!-- 第五组 -->
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
-              <h4 class="title is-3">Cauterization Smoke</h4>
+              <h4 class="title is-4">Cauterization Smoke</h4>
             </div>
           </div>
           <div class="columns is-centered has-text-centered">
@@ -310,27 +313,34 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-full">
               <p class="content has-text-justified">
-                Performance under smoke occlusion and domain adaptation from synthetic to real endoscopic videos.
+                Endo-TTAP similarly achieves superior accuracy, indicating its effectiveness in low-visibility regions. The method’s ability to handle these challenging scenarios again benefits from the semantic guidance, ensuring reliable tracking despite visual degradation.
               </p>
             </div>
           </div>
 
 
-      <!-- <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h3 class="title is-3">Related Links</h3>
-          <div class="content has-text-justified">
-            <p>
-              <a href="https://particle-video-revisited.github.io/">Particle Video Revisited: Tracking Through
-                Occlusions Using Point Trajectories</a> propose Persistent Independent Particles (PIPs), a new particle
-              video method that tracks any pixel over time.
-            </p>
-            <p>
-              <a href="https://github.com/google-research/kubric">Kubric: A scalable dataset generator</a> is a data generation pipeline for creating semi-realistic synthetic multi-object videos with rich annotations such as instance segmentation masks, depth maps, and optical flow.
-            </p>
+          <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+            <div class="column is-full">
+              <h4 class="title is-3">Full trajectory tracking visualization</h4>
+            </div>
           </div>
-        </div>
-      </div> -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-half">
+              <video width="512" height="384" controls autoplay muted loop>
+                <source src="static/video/long_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full">
+              <p class="content has-text-centered">
+                This is the description text corresponding to the new video section, centered for neatness.
+              </p>
+            </div>
+          </div>
+
+
+
     </div>
   </section>
 
